@@ -23,36 +23,36 @@ echo "${source}"
 
 cd linux-api-headers-git && makepkg --verifysource && cd ${source}
 
-cd glibc && makepkg --verifysource && cd ${source}
+cd glibc-git && makepkg --verifysource && cd ${source}
 
-cd binutils && makepkg --verifysource && cd ${source}
+cd binutils-git && makepkg --verifysource && cd ${source}
 
 cd gcc-git && makepkg --verifysource && cd ${source}
 
 # create stage 1 build dir
 
 if ! dir glibc-stage1; then
-  cp -r glibc glibc-stage1
+  cp -r glibc-git glibc-stage1
 fi
 
 if ! dir binutils-stage1; then
-  cp -r binutils binutils-stage1
+  cp -r binutils-git binutils-stage1
 fi
 
-if ! dir gcc-git-stage1; then
-  cp -r gcc-git gcc-git-stage1
+if ! dir gcc-stage1; then
+  cp -r gcc-git gcc-stage1
 fi
 
 # create stage 2 build dir
 
 if ! dir glibc-stage2; then
-  cp -r glibc glibc-stage2
+  cp -r glibc-git glibc-stage2
 fi
 
 if ! dir binutils-stage2; then
-  cp -r binutils binutils-stage2
+  cp -r binutils-git binutils-stage2
 fi
 
-if ! dir gcc-git-stage2; then
-  cp -r gcc-git gcc-git-stage2
+if ! dir gcc-stage2; then
+  cp -r gcc-git gcc-stage2
 fi
