@@ -27,4 +27,4 @@ cd glibc-stage1 && makepkg -si --nocheck && cd ${source}
 
 cd binutils-stage1 && makepkg -si --nocheck && cd ${source}
 
-cd gcc-git-stage1 && makepkg -si --nocheck && cd ${source}
+cd gcc-stage1 && makepkg -si --nocheck && cd ${source}
