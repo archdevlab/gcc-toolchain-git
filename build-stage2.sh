@@ -23,7 +23,7 @@ cd glibc-stage2 && makepkg -si --nocheck && cd ${source}
 
 cd binutils-stage2 && makepkg -si --nocheck && cd ${source}
 
-cd gcc-git-stage2 && makepkg -si --nocheck && cd ${source}
+cd gcc-stage2 && makepkg -si --nocheck && cd ${source}
 
 # make a copy of every pkg in package dir
 
@@ -35,7 +35,7 @@ cp -v glibc-stage2/*.pkg.tar.zst package/
 
 cp -v binutils-stage2/*.pkg.tar.zst package/
 
-cp -v gcc-git-stage2/*.pkg.tar.zst package/
+cp -v gcc-stage2/*.pkg.tar.zst package/
 
 # clean build dir
 
