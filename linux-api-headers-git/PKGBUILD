@@ -26,8 +26,13 @@ provides=('linux-api-headers=$pkgver' linux-api-headers)
 source=(git+https://github.com/torvalds/linux.git#commit=$_commit)
 
 pkgver(){
-  cd linux
-  echo $major.r$(git rev-list --count HEAD).g$(git rev-parse --short HEAD)
+  cd ${srcdir}/linux
+
+  #echo $major.r$(git rev-list --count HEAD).g$(git rev-parse --short HEAD)
+  #git describe --long --tags --abbrev=7 | sed 's/\([^-]*-g\)/r\1/;s/-/./g' | sed 's/.rc/rc/' | sed 's/v//'
+  # cutting off 'foo-' prefix that presents in the git tag
+  # same as above
+  git describe --long --tags --abbrev=7 | sed 's/^v//;s/.rc/rc/;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
 
 build(){
