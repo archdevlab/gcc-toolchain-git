@@ -17,7 +17,7 @@
 pkgbase=glibc-git
 pkgname=(glibc-git lib32-glibc-git)
 pkgver=2.37.r157.g8390014c23
-_commit=8390014c2320f94ffd8a8f6088c10c1f64567954
+_commit=0aa5b28a504c6f1f17b387d8147715d1496fff62
 pkgrel=1
 arch=(x86_64)
 url='https://www.gnu.org/software/libc'
