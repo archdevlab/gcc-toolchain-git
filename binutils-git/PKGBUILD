@@ -15,7 +15,7 @@
 
 pkgname=binutils-git
 pkgver=2.40.r113740.f173b2fc9d0
-_commit=f173b2fc9d03d9e56376ed9ad4c06e82949060dd
+_commit=d89504f0d90dedd3d5ab83d8c91707a354231d2f
 pkgrel=1
 pkgdesc='A set of programs to assemble and manipulate binary and object files (git version)'
 arch=(x86_64)
